@@ -2,9 +2,10 @@
 
 const Controller = require('candyjs/web/Controller');
 const TimeHelper = require('candyjs/helpers/TimeHelper');
+
 const NewsService = require('../../services/NewsService');
 
-class IndexController extends Controller {
+module.exports = class IndexController extends Controller {
 
     async run(req, res) {
         const list = await new NewsService().getList();
@@ -26,5 +27,3 @@ class IndexController extends Controller {
     }
 
 }
-
-module.exports = IndexController;

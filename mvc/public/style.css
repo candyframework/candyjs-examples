@@ -1,0 +1,16 @@
+.wrapper {
+    width: 960px;
+    margin: 0 auto;
+}
+h2 {
+    font-size: 18px;
+}
+article {
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #f5f6f7;
+    border-radius: 5px;
+}
+time {
+    font-size: 12px;
+}

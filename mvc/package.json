@@ -10,6 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "@candyjs/template-hbs": "^0.1.7",
-    "candyjs": "^4.6.2"
+    "candyjs": "^4.9.0"
   }
 }

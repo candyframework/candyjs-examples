@@ -1,6 +1,6 @@
 module.exports = class NewsService {
-    async getList() {
-        return Promise.resolve([
+    constructor() {
+        this.data = [
             {
                 id: 1,
                 title: '这是第一条新闻',
@@ -61,6 +61,24 @@ module.exports = class NewsService {
                 time: 1601517600,
                 content: '这是第十条新闻的内容 这是第十条新闻的内容 这是第十条新闻的内容'
             }
-        ]);
+        ];
+    }
+
+    async getList() {
+        return Promise.resolve(this.data);
+    }
+
+    async getPostById(id) {
+        let numberId = Number(id);
+        let ret = null;
+
+        for(let i=0; i<this.data.length; i++) {
+            if(numberId === this.data[i].id) {
+                ret = this.data[i];
+                break;
+            }
+        }
+
+        return Promise.resolve(ret);
     }
 }
