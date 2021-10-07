@@ -1,5 +1,5 @@
 {
-  "name": "mvc",
+  "name": "action-filter",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@candyjs/template-hbs": "^0.1.7",
     "candyjs": "^4.9.1"
   }
 }
