@@ -13,14 +13,14 @@ module.exports = class IndexController extends Controller {
     }
 
     run(req, res) {
-       this.getView().getViewContent('index', (err, str) => {
-           let data = CandyJs.getI18N().translate('mytype', 'action filter test');
+        this.getView().getViewContent('index', (err, str) => {
+            let data = CandyJs.getI18N().translate('mytype', 'action filter test');
 
-           str = str.replace('{data}', data);
+            str = str.replace('{data}', data);
 
-           res.write(str);
-           res.end();
-       });
+            res.write(str);
+            res.end();
+        });
     }
 
 }

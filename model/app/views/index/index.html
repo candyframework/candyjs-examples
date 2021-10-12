@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Model</title>
+</head>
+<body>
+<div>
+    <div><label>用户名</label><input type="text" id="user_name" /></div>
+    <div><label>密码</label><input type="password" id="password" /></div>
+    <div><label>确认密码</label><input type="password" id="confirming" /></div>
+    <div><label>邮箱</label><input type="text" id="email" /></div>
+    <div><button id="btn">提交</button></div>
+</div>
+
+<script>
+var btn = document.getElementById('btn');
+
+btn.onclick = () => {
+    var userName = document.getElementById('user_name').value;
+    var password = document.getElementById('password').value;
+    var confirming = document.getElementById('confirming').value;
+    var email = document.getElementById('email').value;
+
+    fetch('/api/post', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: 'user_name=' + encodeURIComponent(userName)
+            + '&password=' + encodeURIComponent(password)
+            + '&confirming=' + encodeURIComponent(confirming)
+            + '&email=' + encodeURIComponent(email)
+    }).then((res) => {
+        return res.json();
+
+    }).then((json) => {
+        if(0 === json.status_code) {
+            alert('提交成功');
+        } else {
+            alert(json.messages);
+        }
+    });
+}
+</script>
+</body>
+</html>
