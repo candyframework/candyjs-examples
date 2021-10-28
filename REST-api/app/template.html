@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>REST api</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <style type="text/css" rel="stylesheet">
+    .wrapper {
+        text-align: center;
+        padding: 20px 0;
+    }
+    button {
+        margin: 0 10px;
+    }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <button id="get">获取用户</button>
+        <button id="update">修改用户</button>
+        <button id="delete">删除用户</button>
+    </div>
+
+<script>
+var btnGet = document.getElementById('get');
+var btnUpdate = document.getElementById('update');
+var btnDelete = document.getElementById('delete');
+
+btnGet.onclick = () => {
+    fetch('/user/1')
+        .then((res) => res.json())
+        .then((json) => {
+            if(200 === json.status_code) {
+                alert(json.msg);
+            }
+        })
+};
+
+btnUpdate.onclick = () => {
+    fetch('/user/1', {
+        method: 'PUT'
+    })
+    .then((res) => res.json())
+    .then((json) => {
+        if(200 === json.status_code) {
+            alert(json.msg);
+        }
+    })
+};
+
+btnDelete.onclick = () => {
+    fetch('/user/1', {
+        method: 'DELETE'
+    })
+    .then((res) => res.json())
+    .then((json) => {
+        if(200 === json.status_code) {
+            alert(json.msg);
+        }
+    })
+};
+</script>
+</body>
+</html>
