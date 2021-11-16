@@ -1,5 +1,4 @@
 const CandyJs = require('candyjs');
-const Candy = require('candyjs/Candy');
 const ActionFilter = require('candyjs/core/ActionFilter');
 const Request = require('candyjs/http/Request');
 
