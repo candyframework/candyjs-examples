@@ -1,7 +1,7 @@
 'use strict';
 
-const CandyJs = require('candyjs');
 const Controller = require('candyjs/web/Controller');
+const I18N = require('candyjs/i18n/I18N');
 
 module.exports = class IndexController extends Controller {
 
@@ -14,7 +14,7 @@ module.exports = class IndexController extends Controller {
 
     run(req, res) {
         this.getView().getViewContent('index', (err, str) => {
-            let data = CandyJs.getI18N().translate('mytype', 'action filter test');
+            let data = I18N.getI18N().translate('mytype', 'action filter test');
 
             str = str.replace('{data}', data);
 

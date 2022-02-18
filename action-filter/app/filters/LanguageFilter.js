@@ -1,6 +1,6 @@
-const CandyJs = require('candyjs');
 const ActionFilter = require('candyjs/core/ActionFilter');
 const Request = require('candyjs/http/Request');
+const I18N = require('candyjs/i18n/I18N');
 
 module.exports = class LanguageFilter extends ActionFilter {
     constructor() {
@@ -17,7 +17,7 @@ module.exports = class LanguageFilter extends ActionFilter {
         let q = new Request(req);
         let lang = q.getQueryString('lang', '');
 
-        let i18n = CandyJs.getI18N();
+        let i18n = I18N.getI18N();
         i18n.getTranslator('mytype').setLanguage(lang === 'en' ? 'en-US' : 'zh-CN');
     }
 }
