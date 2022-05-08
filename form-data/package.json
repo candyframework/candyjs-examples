@@ -10,6 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.1",
-    "candyjs": "^4.12.0"
+    "candyjs": "^4.13.0"
   }
 }
