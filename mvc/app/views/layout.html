@@ -3,11 +3,18 @@
 <head>
     <meta charset="utf-8" />
     <title>{{$this.title}}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,  minimal-ui" />
     <link type="text/css" rel="stylesheet" href="/style.css" />
     {{{ $this.getHeadAssets }}}
 </head>
 <body>
+<div class="nav">
+    <div class="nav-inner">
+        <a class="nav-item" href="/">首页</a>
+
+        <a class="btn nav-btn" href="/publish">发布新的</a>
+    </div>
+</div>
 <div class="wrapper">
 {{{ contentHtml }}}
 </div>

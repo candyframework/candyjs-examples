@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "@candyjs/template-hbs": "^1.0.2",
-    "candyjs": "^4.13.3"
+    "body-parser": "^1.20.0",
+    "candyjs": "^4.13.3",
+    "sqlite3": "^5.0.8"
   }
 }
