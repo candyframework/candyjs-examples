@@ -19,6 +19,7 @@ new CandyJs(new App({
     'defaultView': 'template/@candyjs/template-hbs/index',
 
     // sqlite 配置
+    // 这里的 db 配置也可以写到数据库相关操作文件中，此处配置到 app 中只是为了简便
     db: new sqlite3.Database('./testdb.s3db')
 
 })).listen(2333, () => {

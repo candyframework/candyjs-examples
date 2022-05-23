@@ -1,5 +1,7 @@
-const Controller = require('candyjs/web/Controller');
+'use strict';
+
 const Request = require('candyjs/http/Request');
+const Controller = require('candyjs/web/Controller');
 
 const PostsDao = require('../../dao/PostsDao');
 
@@ -12,7 +14,7 @@ module.exports = class IndexController extends Controller {
             data = await new PostsDao().getOne('*', id);
         } catch(e) {
             // todo log
-            console.log(e)
+            console.log(e);
         }
 
         this.getView().title = '详情';

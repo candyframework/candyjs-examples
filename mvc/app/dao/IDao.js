@@ -1,3 +1,5 @@
+'use strict';
+
 const sqlite3 = require('sqlite3');
 const Candy = require('candyjs/Candy');
 
@@ -37,7 +39,7 @@ module.exports = class IDao {
 
         }).catch((e) => {
             // todo log
-            console.log(e)
+            console.log(e);
         });
     }
 
@@ -64,7 +66,7 @@ module.exports = class IDao {
 
         }).catch((e) => {
             // todo log
-            console.log(e)
+            console.log(e);
         });
     }
 
@@ -92,7 +94,7 @@ module.exports = class IDao {
 
         }).catch((e) => {
             // todo log
-            console.log(e)
+            console.log(e);
         });
     }
 };
