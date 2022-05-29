@@ -1,9 +1,9 @@
 {
     "compilerOptions": {
         "module": "commonjs",
-        "target": "es6",
+        "target": "ES2015",
         "preserveConstEnums": true,
-        "moduleResolution": "node",
+        "moduleResolution": "Node",
         "sourceMap": false,
         "baseUrl": ".",
         "allowJs": true,
