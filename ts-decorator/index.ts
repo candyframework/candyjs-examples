@@ -1,4 +1,4 @@
-import Candy = require('candyjs/Candy')
+import Candy = require('candyjs/Candy');
 import CandyJs = require('candyjs');
 import App = require('candyjs/web/Application');
 
