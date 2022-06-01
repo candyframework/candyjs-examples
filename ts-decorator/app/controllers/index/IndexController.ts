@@ -1,4 +1,4 @@
-import Controller = require('@candyjs/decorators');
+import { Controller } from '@candyjs/decorators';
 
 @Controller
 class IndexController {
