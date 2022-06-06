@@ -1,6 +1,6 @@
-import Model = require('candyjs/model/Model');
+import Model from 'candyjs/model/Model';
 
-class UserModel extends Model {
+export default class UserModel extends Model {
     constructor() {
         super();
 
@@ -12,5 +12,3 @@ class UserModel extends Model {
         };
     }
 }
-
-export = UserModel;

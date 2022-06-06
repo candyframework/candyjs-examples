@@ -1,13 +1,7 @@
-// 由于 candyjs 本身主要为 commonjs 规范设计 使用时需要注意以下问题
-//
-// 主框架代码的使用 import require 语法
-// candyjs 提供的扩展包则依照对应说明进行使用
+import'@candyjs/tswrapper';
 
-import Candy = require('candyjs/Candy');
-import CandyJs = require('candyjs');
-import App = require('candyjs/web/Application');
-
-Candy.defaultExtension = '';
+import CandyJs from 'candyjs';
+import App from 'candyjs/web/Application';
 
 new CandyJs(new App({
     'id': 1,

@@ -7,10 +7,15 @@
         "sourceMap": false,
         "baseUrl": ".",
         "allowJs": true,
+        "experimentalDecorators": true,
         "allowSyntheticDefaultImports": true,
-        "experimentalDecorators": true
+        "esModuleInterop": true
     },
     "exclude": [
         "node_modules"
+    ],
+    "include": [
+        "index.ts",
+        "app/**/*"
     ]
 }

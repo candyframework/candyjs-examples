@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@candyjs/decorators": "0.0.5",
+    "@candyjs/tswrapper": "0.0.2",
     "candyjs": "^4.14.2"
   }
 }
