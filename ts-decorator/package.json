@@ -15,7 +15,7 @@
     "typescript": "^4.7.2"
   },
   "dependencies": {
-    "@candyjs/decorators": "0.0.5",
+    "@candyjs/decorators": "0.0.6",
     "@candyjs/tswrapper": "0.0.2",
     "candyjs": "^4.14.2"
   }
