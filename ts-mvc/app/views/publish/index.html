@@ -1,0 +1,43 @@
+{{ $this.addHeadAsset '<link type="text/css" rel="stylesheet" href="/publish.css">' }}
+
+<form class="form">
+    <div class="form-item">
+        <label for="title">标题：</label>
+        <input type="text" id="title" maxlength="20">
+    </div>
+    <div class="form-item">
+        <div>
+            <textarea id="content" rows="20" class="form-content"></textarea>
+        </div>
+    </div>
+    <div class="form-item">
+        <span class="btn" id="pub-btn">发布</span>
+    </div>
+</form>
+
+<script type="text/javascript">
+var btn = document.getElementById('pub-btn');
+btn.onclick = () => {
+    var title = document.getElementById('title').value;
+    var content = document.getElementById('content').value;
+
+    fetch('/api/post', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: 'title=' + encodeURIComponent(title)
+            + '&content=' + encodeURIComponent(content)
+    }).then((res) => {
+        return res.json();
+
+    }).then((json) => {
+        if(0 === json.status_code) {
+            alert('提交成功');
+            location.href = '/';
+        } else {
+            alert(json.messages);
+        }
+    });
+}
+</script>

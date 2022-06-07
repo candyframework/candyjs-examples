@@ -1,0 +1,24 @@
+{
+  "name": "ts-mvc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx ts-node index.ts"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@candyjs/template-hbs": "^1.0.2",
+    "@candyjs/tswrapper": "0.0.2",
+    "body-parser": "^1.20.0",
+    "candyjs": "^4.14.6",
+    "sqlite3": "^5.0.8"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.36",
+    "ts-node": "^10.8.0",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.2"
+  }
+}

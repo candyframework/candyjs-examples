@@ -1,0 +1,29 @@
+.form-item {
+    margin-bottom: 10px;
+}
+.form-item label {
+    display: inline-block;
+    width: 60px;
+}
+.form-item input[type="text"] {
+    display: inline-block;
+    padding: 0 10px;
+    width: 200px;
+    height: 32px;
+    line-height: 32px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    outline: none;
+}
+.form-content {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 10px;
+    height: 200px;
+    line-height: 20px;
+    font-size: 14px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    outline: none;
+}
