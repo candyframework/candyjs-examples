@@ -1,4 +1,4 @@
-import'@candyjs/tswrapper';
+import '@candyjs/tswrapper';
 
 import CandyJs from 'candyjs';
 import App from 'candyjs/web/Application';
