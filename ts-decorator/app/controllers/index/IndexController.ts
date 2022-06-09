@@ -3,7 +3,9 @@ import { Controller, Model } from '@candyjs/decorators';
 @Controller
 class IndexController {
 
-    @Model()
+    // @Model()
+    // or write as follow
+    @Model('@app/models/UserModel')
     userModel;
 
     run(req, res) {
