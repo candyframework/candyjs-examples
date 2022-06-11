@@ -1,5 +1,5 @@
 {
-  "name": "mvc",
+  "name": "helloworld",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,9 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@candyjs/template-hbs": "^1.0.2",
-    "body-parser": "^1.20.0",
-    "candyjs": "^4.14.7",
-    "sqlite3": "^5.0.8"
+    "candyjs": "^4.14.7"
   }
 }
