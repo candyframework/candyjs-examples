@@ -1,0 +1,49 @@
+<button type="button" id="login-btn">登录</button>
+<button type="button" id="userinfo-btn">获取用户信息</button>
+
+<script>
+let loginBtn = document.getElementById('login-btn');
+let userBtn = document.getElementById('userinfo-btn');
+
+loginBtn.onclick = () => {
+    fetch('/api/login', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: ''
+    }).then((res) => {
+        return res.json();
+
+    }).then((json) => {
+        if(0 === json.status_code) {
+            localStorage.setItem('login-info', json.data);
+
+            alert('登录成功');
+
+        } else {
+            alert(json.messages);
+        }
+    });
+};
+
+userBtn.onclick = () => {
+    fetch('/api/userinfo', {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+            'Authorization': 'Bearer ' + localStorage.getItem('login-info')
+        }
+    }).then((res) => {
+        return res.json();
+
+    }).then((json) => {
+        if(0 === json.status_code) {
+            alert('用户信息：' + JSON.stringify(json.data))
+
+        } else {
+            alert(json.messages);
+        }
+    });
+};
+</script>
