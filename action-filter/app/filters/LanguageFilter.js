@@ -17,7 +17,7 @@ module.exports = class LanguageFilter extends ActionFilter {
         let q = new Request(req);
         let lang = q.getQueryString('lang', '');
 
-        let i18n = I18N.getI18N();
-        i18n.getTranslator('mytype').setLanguage(lang === 'en' ? 'en-US' : 'zh-CN');
+        let t = I18N.getTranslator('fileBased');
+        t.setLanguage(lang === 'en' ? 'en-US' : 'zh-CN');
     }
 }
