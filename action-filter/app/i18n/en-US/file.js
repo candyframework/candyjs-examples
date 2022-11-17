@@ -1,4 +1,4 @@
 const msg = {
-    'action filter test': 'action filter test'
+    'title': 'action filter test'
 };
 module.exports = msg;
