@@ -6,9 +6,9 @@ const I18N = require('candyjs/i18n/I18N');
 module.exports = class IndexController extends Controller {
 
     // 定义动作执行前的 filter
-    behaviors() {
+    filters() {
         return [
-            ['languageFilter', 'app/filters/LanguageFilter']
+            'app/filters/LanguageFilter'
         ];
     }
 
