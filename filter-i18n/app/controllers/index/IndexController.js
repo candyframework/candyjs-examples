@@ -14,7 +14,7 @@ module.exports = class IndexController extends Controller {
 
     run(req, res) {
         this.getView().getViewContent('index', (err, str) => {
-            let data = I18N.getTranslator('fileBased').translate('file', 'title');
+            let data = I18N.getTranslator('fileBased').translate('default', 'title');
 
             str = str.replace('{data}', data);
 
