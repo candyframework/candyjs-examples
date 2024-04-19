@@ -9,6 +9,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "candyjs": "^4.13.3"
+    "candyjs": "^4.20.0"
   }
 }

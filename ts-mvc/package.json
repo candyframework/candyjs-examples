@@ -12,7 +12,7 @@
     "@candyjs/template-hbs": "^1.0.2",
     "@candyjs/tswrapper": "0.0.2",
     "body-parser": "^1.20.0",
-    "candyjs": "^4.15.5",
+    "candyjs": "^4.20.0",
     "sqlite3": "^5.0.8"
   },
   "devDependencies": {

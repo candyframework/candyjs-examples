@@ -5,7 +5,7 @@ const R = require('candyjs/midwares/Resource');
 
 // 配置静态资源目录
 // before 4.19
-// Hook.addHook(R().serve(__dirname + '/public'));
+// Hook.addHook(R.serve(__dirname + '/public'));
 // since 4.20
 Hook.addHook(new R(__dirname + '/public').serve());
 
