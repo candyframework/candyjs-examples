@@ -11,7 +11,7 @@
   "dependencies": {
     "@candyjs/template-hbs": "^1.0.2",
     "body-parser": "^1.20.0",
-    "candyjs": "^4.14.7",
+    "candyjs": "^4.20.0",
     "sqlite3": "^5.0.8"
   }
 }
